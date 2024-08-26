@@ -34,7 +34,6 @@ For more information about our lab and other projects, please visit [Digital Agr
 
 ## Conference Poster
 
-Check out the poster of this work that we presented at the ESEARCH program of UC Davis in the summer of 2024:
+Check out the poster of this work that we presented at the ESEARCH program of UC Davis in the summer of 2024. Click on the image below to view the full PDF:
 
-[View ESEARCH 2024 Poster](ESEARCH2024_Summer_GVCIP.pdf)
-
+[![ESEARCH 2024 Poster Preview](ESEARCH2024_Summer_GVCIP.png)](ESEARCH2024_Summer_GVCIP.pdf)
