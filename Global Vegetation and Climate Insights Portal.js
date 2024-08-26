@@ -65,7 +65,7 @@ var products = {
       'fff705', 'ffd611', 'ffb613', 'ff8b13', 'ff6e08', 'ff500d',
       'ff0000', 'de0101', 'c21301', 'a71001', '911003'
     ]},
-    label: 'Land Surface Temperature (Daytime (K))'
+    label: 'Land Surface Temperature (Daytime (F))'
   },
   'Mean Air Temperature': {
     collection: 'ECMWF/ERA5/DAILY',
@@ -108,7 +108,7 @@ function initializeUI() {
     onChange: function(selectedProduct) {
       setupProductLayer(selectedProduct, mapPanel, inspectorPanel);
     },
-    value: 'Evapotranspiration'  // Default selected product
+    value: 'Fraction of Photosynthetically Active Radiation'  // Default selected product
   });
 
   inspectorPanel.add(productSelector);
@@ -117,9 +117,9 @@ function initializeUI() {
   var legendPanel = ui.Panel();
   inspectorPanel.add(legendPanel);
 
-  // Trigger the display of Evapotranspiration layer and chart at initialization
-  setupProductLayer('Evapotranspiration', mapPanel, inspectorPanel);
-  displayInitialChart(davisCoords, 'Evapotranspiration', inspectorPanel, mapPanel, legendPanel); // Automatically display the chart
+  // Trigger the display of Fraction of Photosynthetically Active Radiation layer and chart at initialization
+  setupProductLayer('Fraction of Photosynthetically Active Radiation', mapPanel, inspectorPanel);
+  displayInitialChart(davisCoords, 'Fraction of Photosynthetically Active Radiation', inspectorPanel, mapPanel, legendPanel); // Automatically display the chart
 
   // Description and additional information
   var description = ui.Label({
@@ -192,7 +192,7 @@ function displayChart(coords, collection, product, panel, mapPanel) {
   var chartCollection = collection.map(function(image) {
     var factor = product.band === 'Lai_500m' ? 100 :
                  product.band === 'NDVI' ? 10000 :
-                 product.band === 'Evapotranspiration' ? 10 :
+                 product.band === 'ET' ? 10 :
                  product.band === 'LST_Day_1km' ? 200 : 1;
 
     return image.select([product.band])
