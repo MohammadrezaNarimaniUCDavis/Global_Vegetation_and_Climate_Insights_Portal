@@ -19,7 +19,7 @@ This portal leverages the comprehensive satellite data archives available within
 
 ### Explore the Code
 To view the source code and contribute to the development, visit the repository on Google Earth Engine Code Editor:
-- [Global Vegetation and Climate Insights Portal Code]([https://code.earthengine.google.com/?accept_repo=users/mnarimani/ESEARCHSummer2025])
+- [Global Vegetation and Climate Insights Portal Code](https://code.earthengine.google.com/?accept_repo=users/mnarimani/ESEARCHSummer2025)
 
 ### Explore the App
 Experience the application live:
